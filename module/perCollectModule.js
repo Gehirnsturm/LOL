@@ -1,9 +1,9 @@
 var perCollectModule = function(){}
 
-perCollectModule.prototype.collectList = function( ep ){
+perCollectModule.prototype.collectList = function( ep,data ){
 	ep.on("conn",function( conn ){
-		var sql = "select * from collect";
-		conn.query(sql,ep.done("success"));
+		var sql = "select * from collect where aid=?";
+		conn.query(sql,data,ep.done("success"));
 		conn.release(); 
 	});
 }

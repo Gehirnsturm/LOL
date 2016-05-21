@@ -7,7 +7,7 @@ personalControl.prototype.index = function( req,res,next ){
 personalControl.prototype.collectList = function( req,res,next ){
 	var ep = new EventProxy();
 	dataSource.getConn( ep );
-	perCollectModule.collectList(ep);
+	perCollectModule.collectList(ep,[req.session.admin.aid]);
 	ep.on("success",function( data ){
 		res.json(data);
 	});
