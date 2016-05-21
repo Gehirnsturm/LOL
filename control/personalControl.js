@@ -1,8 +1,6 @@
 var personalControl = function (){}
 
 personalControl.prototype.index = function( req,res,next ){
-	//从数据库获取数据
-	//找到模板   //渲染页面输出
 	res.render("personal.html",{user:req.session.admin});
 }
 
