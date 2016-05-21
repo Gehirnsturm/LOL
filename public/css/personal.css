@@ -1,0 +1,274 @@
+.wraper {
+  width: 100%;
+  background: url(/img/main-bg.jpg) no-repeat center top;
+}
+.wraper .toper {
+  width: 980px;
+  height: 474px;
+  margin: 0px auto;
+}
+.wraper .toper .navbar-fixed-top {
+  position: absolute;
+}
+.wraper .toper .navbar-default {
+  background: none;
+  border: none;
+}
+.wraper .toper .navbar-default .navbar-collapse {
+  padding-top: 10px;
+  border: none;
+}
+.wraper .toper .navbar-default .nav {
+  font-size: 16px;
+  font-weight: 700;
+}
+.wraper .toper .navbar-default .nav a {
+  color: white;
+}
+.wraper .toper .navbar-default .nav a:hover {
+  color: #00A383;
+}
+.pageuserline {
+  background: #fff;
+  margin-top: 50px;
+  border: 1px solid #E1E1E1;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #00A383;
+  padding: 20px;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+.pageuserline .navbar-toggle {
+  background: #D7D7D7;
+  border: #D7D7D7;
+}
+.pageuserline .navbar-toggle:hover {
+  background: #00A383;
+}
+.pageuserline .navbar-brand {
+  width: auto;
+}
+.pageuserline .collapse li a:hover {
+  background: #00A383;
+}
+.percontent {
+  border: 1px solid #E1E1E1;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  border-top: none;
+}
+.percontent .nav li {
+  border-top: 4px solid #D7D7D7;
+}
+.percontent .nav li a {
+  font-size: 16px;
+  color: #aaabae;
+  font-weight: bold;
+}
+.percontent .nav .active {
+  border-top: 4px solid #00A383;
+  color: #00A383;
+}
+.percontent .nav .active a {
+  color: #00A383;
+}
+.percontent .nav li:hover {
+  border-top: 4px solid #00A383;
+}
+.percontent .nav li:hover a {
+  color: #00A383;
+}
+.percontent .nav-tabs > li {
+  border-left: none;
+}
+#myTabContent {
+  min-height: 500px;
+}
+/***我的收藏开始***/
+#myTabContent .collectList {
+  padding: 10px 10px;
+}
+#myTabContent .collectList .imgbox .sHoverItem {
+  padding-bottom: 0px;
+  height: 175px;
+}
+#myTabContent .collectList .imgbox .sHoverItem img {
+  width: 100%;
+  height: 100%;
+}
+#myTabContent .collectList .imgbox .sHoverItem .sIntro {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #00A887;
+  padding: 20px;
+}
+#myTabContent .collectList .imgbox .sHoverItem .sIntro .imginfo {
+  color: #fff;
+  line-height: 20px;
+}
+#myTabContent .collectList .imgbox .sHoverItem .sIntro .update {
+  text-align: right;
+  color: #fff;
+}
+#myTabContent .collectList .imgbox .sHoverItem .sIntro .collectAdd {
+  font-size: 36px;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 135px;
+}
+#myTabContent .collectList .imgbox .sHoverItem .sIntro .collectDel {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#myTabContent .collectList .imgbox .sHoverItem .sIntro .collectDel:hover {
+  color: #666;
+}
+#myTabContent .collectList .imgbox .addbox {
+  background: #f1f2f6;
+  text-align: center;
+}
+#myTabContent .collectList .imgbox .addbox .addi {
+  font-size: 100px;
+  color: #00A887;
+  line-height: 175px;
+  font-weight: 100;
+}
+#myTabContent .collectList .imgbox .imgname {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #E1E1E1;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+#myTabContent .collectList .collectAdd {
+  width: 100%;
+  height: 175px;
+}
+/***我的收藏结束***/
+/***个人信息开始***/
+#myTabContent .perInfo {
+  padding: 30px;
+}
+#myTabContent .perInfo .infotab-area {
+  width: 100px;
+  height: 90px;
+  border-top: 3px solid #00A383;
+  border-left: 1px solid #E1E1E1;
+  border-right: 1px solid #E1E1E1;
+  padding: 10px 0px 13px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  bottom: -1px;
+  background: #fff;
+}
+#myTabContent .perInfo .infotab-area img {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #00A483;
+  border-radius: 50px;
+  margin-bottom: 5px;
+}
+#myTabContent .perInfo .infotab-area p {
+  color: #666;
+}
+#myTabContent .perInfo .infouser {
+  border: 1px solid #E1E1E1;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  margin: 0px;
+  padding: 40px 30px;
+  line-height: 120px;
+}
+#myTabContent .perInfo .infouser .userimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+#myTabContent .perInfo .infouser .username p {
+  font-size: 30px;
+  color: #333;
+  font-weight: 900;
+}
+#myTabContent .perInfo .infouser .userhonor {
+  width: 135px;
+  height: 120px;
+}
+/***个人信息结束***/
+/***我的攻略开始***/
+#myTabContent .perstrategy {
+  margin: 20px 50px;
+  text-align: center;
+  background: #7FD1C1;
+  height: 50px;
+} /***我的攻略结束***/
+#myTabContent .perstrategy p {
+  font-size: 16px;
+  line-height: 50px;
+}
+.footer {
+  width: 86%;
+  margin: 0px auto;
+  padding: 0px 15px;
+  background: none;
+}
+.footer .foot {
+  margin-top: 50px;
+  font-size: 12px;
+}
+.footer .foot .col-md-3 {
+  padding: 0px;
+  padding-top: 10px;
+}
+.footer .foot .col-md-9 {
+  padding: 0px;
+}
+.footer .foot ul {
+  padding-left: 10px;
+  list-style: none;
+  overflow: hidden;
+  margin: 0px;
+}
+.footer .foot ul li {
+  display: inline-block;
+  padding: 1px 4px;
+}
+.footer .foot ul li a {
+  color: #333;
+  display: block;
+}
+/*当页面大于 1200px 时，大屏幕，主要是 PC 端*/
+@media (min-width: 1200px) {
+}
+/*在 992 和 1199 像素之间的屏幕里，中等屏幕，分辨率低的 PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+/*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .wraper .toper .navbar-default .nav {
+    font-size: 14px;
+  }
+}
+/*在 480 和 767 像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+}
+/*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+}
+/*# sourceMappingURL=personal.css.map */

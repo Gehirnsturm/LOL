@@ -1,0 +1,27 @@
+<style id="collectList" type="text/css">
+<div class="row collectList">
+	<% collects.forEach(function( collect ){ %>
+		<div class="col-md-4 col-sm-4 imgbox">
+			<div class="sHoverItem">
+				<img src="<%= collect.imgpath %>" class="img-responsive"/>
+				<span class="sIntro">
+					<a href="#/collectDel/<%= collect.cid %>" class="collectDel" >X</a>
+					<span class="imginfo"><%= collect.imginfo %></span>
+					<p class="update"><%= collect.uptime %></p>
+				</span>
+			</div>
+			<span class="imgname"><%= collect.imgname %></span>
+		</div>
+	<% }) %>
+	
+	<div class="col-md-4 col-sm-4 imgbox">
+		<div class="sHoverItem addbox">
+			<i class="glyphicon glyphicon-plus addi"></i>
+			<span class="sIntro">
+				<a href="#/collectAdd" class="collectAdd">添加我的收藏</a>
+			</span>
+		</div>
+		<a href="#/collectAdd" class="imgname">添加</a>
+	</div>
+</div>
+</style>

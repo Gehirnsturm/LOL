@@ -1,0 +1,57 @@
+var personalControl = function (){}
+
+personalControl.prototype.index = function( req,res,next ){
+	//从数据库获取数据
+	//找到模板   //渲染页面输出
+	res.render("personal.html",{user:req.session.admin});
+}
+
+personalControl.prototype.collectList = function( req,res,next ){
+	var ep = new EventProxy();
+	dataSource.getConn( ep );
+	perCollectModule.collectList(ep);
+	ep.on("success",function( data ){
+		res.json(data);
+	});
+	ep.fail(function( err ){
+		next(err);
+	});
+}
+
+personalControl.prototype.collectAdd = function( req,res,next ){
+	var ep = new EventProxy();
+	
+	ep.all("fileup","conn",function( filename,conn ){
+		var url = "/upfile/" + filename;
+		perCollectModule.collectAdd(ep,conn,[ req.body.imgname,url,req.body.imginfo,req.session.admin.aid ]);
+	})
+	util.upfile(ep,req.file);   //上传文件
+	dataSource.getConn( ep );   //获取连接
+	
+	ep.on("success",function( data ){
+		if( data.insertId ){
+			res.json( config.info.suc ).end();
+		}else{
+			res.json(config.error.collectAdderr).end();
+		}
+	});
+	ep.fail(function( err ){
+		next(err);
+	});
+}
+
+personalControl.prototype.collectDel = function( req,res,next ){
+	var ep = new EventProxy();
+	dataSource.getConn( ep );
+	perCollectModule.collectDel(ep,[ req.params.cid ]);
+	ep.on("success",function( data ){
+		res.json( config.info.suc ).end();
+	});
+	ep.fail(function( err ){
+		next(err);
+	});
+}
+
+module.exports=function(){
+	return new personalControl();
+}

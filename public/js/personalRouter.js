@@ -1,0 +1,150 @@
+$(function(){
+	var router = new Router({
+	    container: '#myTabContent',
+	    enterTimeout : 200,
+	    leaveTimeout : 200
+	});
+	
+	/*个人信息开始*/
+	var perInfo = {
+		url : "/perInfo",
+		render : function(){
+			return $("#perInfo").html();
+		}
+	}
+	/*个人信息结束*/
+	
+	/*我的攻略开始*/
+	
+	var perstrategy = {
+		url : "/perstrategy",
+		render : function(){
+			return $("#perstrategy").html();
+		}
+	}
+	
+	/*我的攻略结束*/
+	
+	/*我的收藏开始*/
+	//显示我的收藏列表
+	var collectList = {
+		 url : "/collectList",
+		 className : "collectList",
+		 ajaxData : function(){
+		 	var that = this;
+		 	return $._ajax({
+		 		url  : "/admin/collect",
+		 		type : "get"
+		 	}).done(function( data ){
+		 		that.data = data;
+		 	});
+		 },
+		 //绑定感应鼠标方向插件
+		 bind : function(){
+		 	var a=new sHover("sHoverItem","sIntro");
+			a.set({
+			 	slideSpeed:5,
+			 	opacityChange:true,
+			 	opacity:80
+			});
+		 },
+		 
+		 render : function(){
+		 	return ejs.render($("#collectList").html(),{collects:this.data});
+		 }
+	}
+	
+	var collectAdd = {
+		url : "/collectAdd",
+		render : function(){
+			return $("#collectAdd").html();
+		},
+		bind : function(){
+			var t = $(this);
+			$(this).find("#sub").click(function(){
+				var imgname = t.find("#imgname").val();
+				var imginfo = t.find("#imginfo").val();
+				var imgpath = t.find("#imgpath").val();
+				
+				var data = new FormData();
+				data.append("imgname",imgname);
+				data.append("imginfo",imginfo);
+				data.append("upfile",t.find("#imgpath").get(0).files[0]);
+				
+				//提交ajax 
+				$._ajax({
+					url : "/admin/collect",
+					data: data,
+					cache: false,  
+			        contentType: false,  
+			        processData: false
+//					data : {"imgname":imgname,"imgpath":imgpath,"imginfo":imginfo}
+				}).done(function( obj ){
+					if( obj.code ){
+						//如果增加成功，返回管理员列表
+						location.href = "/admin/personal#/collectList";
+					}else{
+						$(this).find(".alert").alertMes({type:"danger",message:obj.msg});
+					}
+				});
+				
+			});
+			
+			
+			t.find("#imgpath").change(function(){
+				var file = this.files[0];
+				if( file.type.indexOf("image") == -1 ){
+					$(this).val("");
+					t.find(".alert").alertMes({type:"danger",message:"只能上传图片格式"});
+					return;
+				}
+//				if( file.size >(1024*512) ){
+//					$(this).val("");
+//					t.find(".alert").alertMes({type:"danger",message:"只能上传小于512K的图片"});
+//					return;
+//				}
+				
+				var fr = new FileReader();
+				fr.readAsDataURL(file); 
+				fr.onload = function(){
+					$("#showimg").attr("src",fr.result);
+					$("#showimg").attr("style","height:175px;margin-top: 5px;");
+				}
+				
+			});
+		}
+	}
+	
+	var collectDel = {
+		url : "/collectDel/:cid",
+		ajaxData : function(){
+			var t = this;
+			$._ajax({
+				url  : "/admin/collect/" + t.params.cid,
+				type : "delete"
+			}).done(function(){
+				location.href = "/admin/personal#/collectList";
+			});
+			
+			return false;
+		}
+	}
+	/*我的收藏结束*/
+	
+
+	//默认页面
+	var home = {
+		url : "/",
+		render : function(){
+			return $("#perInfo").html();
+		}
+	}
+	
+	router.push(perInfo)
+		  .push(perstrategy)
+		  .push(collectList)
+		  .push(collectAdd)
+		  .push(collectDel)
+		  .push(home)
+		  .setDefault('/').init();
+});

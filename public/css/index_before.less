@@ -1,0 +1,174 @@
+*{margin: 0px;padding: 0px;}
+.wraper{
+    background:url(../img/index-bg.jpg) no-repeat center top;
+    width: 1349px;
+    height: 1084px;
+    position: relative;
+    .foot{
+        position: absolute;
+        bottom: 30px;
+        right: 200px;
+        font-size: 12px;
+        ul{
+            list-style: none;
+            overflow: hidden;
+            margin: 0px;
+            li{
+                display: inline-block;
+                padding: 1px 3px;
+                a{
+                    color: #333;
+                    display: block;
+                }
+            }
+        }
+    }
+    .content-foot{
+         position: absolute;
+         bottom: 160px;
+         left: 190px;
+         .h1{
+             float: left;
+             margin: 0px 4px;
+             &:hover .huo1{
+                 position: relative;
+                 z-index: -1;
+             }
+         }
+         .h2{
+             float: left;
+             margin: 0px 4px;
+             &:hover .huo1{
+                 position: relative;
+                 z-index: -1;
+             }
+         }
+         .h3{
+             float: left;
+             margin: 0px 4px; 
+             &:hover .huo1{
+                 position: relative;
+                 z-index: -1;
+             }       
+         }
+         img{
+             cursor: pointer;
+         }
+    }
+    .toper{
+        background: url(../img/index-top.jpg) no-repeat center top;
+        width: 960px;
+        height: 464px;
+        position: absolute;
+        left: 194px;       
+    }
+    .content{
+        position: absolute;
+        top: 463px;
+        left: 194px;
+        width: 960px;
+        height: 306px;
+        overflow: hidden;
+        img{
+            cursor: pointer;
+        }
+        .img-left{
+            width: 225px;
+            float: left;
+            .spr1{
+                width: 225px;
+                height: 127px;
+                overflow: hidden;
+                .spr1_2{
+                  position: relative;
+                  bottom: 127px;
+                  opacity: 0.5;
+                  animation: yan 50s infinite linear;
+                  &:hover{
+                      animation: yan 30s infinite linear;
+                  }
+                }
+            }
+            .spr2{
+                width: 225px;
+                height: 90px;
+                &:hover .spr2_1{
+                    z-index: -1;
+                }
+                .spr2_1{          
+                    position: relative;
+                    z-index: 1;
+                }
+                .spr2_2{
+                    position: relative;
+                    bottom: 90px;
+                }
+            }
+            .spr3{
+                width: 225px;
+                height: 90px;  
+                &:hover .spr3_1{
+                    z-index: -1;
+                }            
+                .spr3_1{
+                    position: relative;
+                    z-index: 1;
+                    margin: 0;
+                }
+                .spr3_2{
+                    position: relative;
+                    bottom: 90px;
+                }           
+            }
+        }
+        .img-center{
+            position: relative;
+            left: 10px;
+            float: left;
+            width: 490px;
+            height: 306px;
+            background: #3D59AB;
+            border-radius: 10px;
+        }
+        .img-right{         
+            float: right;
+            width: 225px;
+            .spr4{
+                width: 225px;
+                height: 177px;
+                overflow: hidden;
+                .spr4_2{
+                  position: relative;
+                  bottom: 177px;
+                  opacity: 0.4;
+                  animation: yan 50s infinite linear;
+                  &:hover{
+                      animation: yan 30s infinite linear;
+                  }
+                }
+            }
+            .spr5{
+                position: relative;
+                top: 10px;
+                width: 225px;
+                height: 120px;  
+                &:hover .spr5_1{
+                   z-index: -1; 
+                }
+                .spr5_1{
+                    position: relative;
+                    z-index: 1;
+                }  
+                .spr5_2{
+                    position: relative;
+                    bottom: 120px;
+                }   
+            }
+        }
+    }
+}
+
+@keyframes yan{
+    from{ transform: translateY(0px);}
+    to{transform: translateY(-756px);}
+}

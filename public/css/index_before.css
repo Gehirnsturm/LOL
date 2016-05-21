@@ -1,0 +1,181 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.wraper {
+  background: url(../img/index-bg.jpg) no-repeat center top;
+  width: 1349px;
+  height: 1084px;
+  position: relative;
+}
+.wraper .foot {
+  position: absolute;
+  bottom: 30px;
+  right: 200px;
+  font-size: 12px;
+}
+.wraper .foot ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 0px;
+}
+.wraper .foot ul li {
+  display: inline-block;
+  padding: 1px 3px;
+}
+.wraper .foot ul li a {
+  color: #333;
+  display: block;
+}
+.wraper .content-foot {
+  position: absolute;
+  bottom: 160px;
+  left: 190px;
+}
+.wraper .content-foot .h1 {
+  float: left;
+  margin: 0px 4px;
+}
+.wraper .content-foot .h1:hover .huo1 {
+  position: relative;
+  z-index: -1;
+}
+.wraper .content-foot .h2 {
+  float: left;
+  margin: 0px 4px;
+}
+.wraper .content-foot .h2:hover .huo1 {
+  position: relative;
+  z-index: -1;
+}
+.wraper .content-foot .h3 {
+  float: left;
+  margin: 0px 4px;
+}
+.wraper .content-foot .h3:hover .huo1 {
+  position: relative;
+  z-index: -1;
+}
+.wraper .content-foot img {
+  cursor: pointer;
+}
+.wraper .toper {
+  background: url(../img/index-top.jpg) no-repeat center top;
+  width: 960px;
+  height: 464px;
+  position: absolute;
+  left: 194px;
+}
+.wraper .content {
+  position: absolute;
+  top: 463px;
+  left: 194px;
+  width: 960px;
+  height: 306px;
+  overflow: hidden;
+}
+.wraper .content img {
+  cursor: pointer;
+}
+.wraper .content .img-left {
+  width: 225px;
+  float: left;
+}
+.wraper .content .img-left .spr1 {
+  width: 225px;
+  height: 127px;
+  overflow: hidden;
+}
+.wraper .content .img-left .spr1 .spr1_2 {
+  position: relative;
+  bottom: 127px;
+  opacity: 0.5;
+  animation: yan 50s infinite linear;
+}
+.wraper .content .img-left .spr1 .spr1_2:hover {
+  animation: yan 30s infinite linear;
+}
+.wraper .content .img-left .spr2 {
+  width: 225px;
+  height: 90px;
+}
+.wraper .content .img-left .spr2:hover .spr2_1 {
+  z-index: -1;
+}
+.wraper .content .img-left .spr2 .spr2_1 {
+  position: relative;
+  z-index: 1;
+}
+.wraper .content .img-left .spr2 .spr2_2 {
+  position: relative;
+  bottom: 90px;
+}
+.wraper .content .img-left .spr3 {
+  width: 225px;
+  height: 90px;
+}
+.wraper .content .img-left .spr3:hover .spr3_1 {
+  z-index: -1;
+}
+.wraper .content .img-left .spr3 .spr3_1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+.wraper .content .img-left .spr3 .spr3_2 {
+  position: relative;
+  bottom: 90px;
+}
+.wraper .content .img-center {
+  position: relative;
+  left: 10px;
+  float: left;
+  width: 490px;
+  height: 306px;
+  background: #3D59AB;
+  border-radius: 10px;
+}
+.wraper .content .img-right {
+  float: right;
+  width: 225px;
+}
+.wraper .content .img-right .spr4 {
+  width: 225px;
+  height: 177px;
+  overflow: hidden;
+}
+.wraper .content .img-right .spr4 .spr4_2 {
+  position: relative;
+  bottom: 177px;
+  opacity: 0.4;
+  animation: yan 50s infinite linear;
+}
+.wraper .content .img-right .spr4 .spr4_2:hover {
+  animation: yan 30s infinite linear;
+}
+.wraper .content .img-right .spr5 {
+  position: relative;
+  top: 10px;
+  width: 225px;
+  height: 120px;
+}
+.wraper .content .img-right .spr5:hover .spr5_1 {
+  z-index: -1;
+}
+.wraper .content .img-right .spr5 .spr5_1 {
+  position: relative;
+  z-index: 1;
+}
+.wraper .content .img-right .spr5 .spr5_2 {
+  position: relative;
+  bottom: 120px;
+}
+@keyframes yan {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-756px);
+  }
+}
+/*# sourceMappingURL=index_before.css.map */
