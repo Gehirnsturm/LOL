@@ -1,0 +1,298 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+body {
+  background: rgba(192, 192, 192, 0.2);
+}
+ul {
+  margin: 0px;
+}
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.wraper .banner {
+  background: url(../img/page-bg.jpg) no-repeat center top;
+  width: 100%;
+  height: 474px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+.wraper .toper {
+  width: 86%;
+  height: 474px;
+  margin: 0px auto;
+  padding: 360px 15px 0px 15px;
+}
+.wraper .toper .navbar-fixed-top {
+  position: absolute;
+}
+.wraper .toper .navbar-default {
+  background: none;
+  border: none;
+}
+.wraper .toper .navbar-default .navbar-collapse {
+  padding-top: 10px;
+  border: none;
+}
+.wraper .toper .navbar-default .nav {
+  font-size: 16px;
+  font-weight: 700;
+}
+.wraper .toper .navbar-default .nav a {
+  color: white;
+}
+.wraper .toper .navbar-default .nav a:hover {
+  color: #00A383;
+}
+.wraper .toper .toper-bottom {
+  overflow: hidden;
+  position: relative;
+  top: 5px;
+}
+.wraper .toper .toper-bottom .no-pad {
+  padding: 1px;
+}
+.wraper .toper .toper-bottom a {
+  display: inline-block;
+  width: 100%;
+  height: 108px;
+  color: #fff;
+  text-align: center;
+  line-height: 108px;
+}
+.wraper .toper .toper-bottom a:hover {
+  text-decoration: none;
+}
+.wraper .toper .toper-bottom .toper-sp {
+  background: #AD2E25;
+  font-size: 32px;
+  font-weight: bold;
+}
+.wraper .toper .toper-bottom .toper-sp:hover {
+  background-image: -webkit-radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.3), #ad2f0b);
+  background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.3), #ad2f0b);
+}
+.wraper .toper .toper-bottom .toper-vp1 {
+  background: #222633;
+  font-size: 18px;
+}
+.wraper .toper .toper-bottom .toper-vp1:hover {
+  background-image: -webkit-radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), #222633);
+  background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), #222633);
+}
+.wraper .toper .toper-bottom .toper-login {
+  background: #384665;
+  font-size: 18px;
+}
+.wraper .toper .toper-bottom .toper-login:hover {
+  background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
+}
+.wraper .daohang {
+  margin: 20px 0px;
+}
+.wraper .daohang a {
+  color: #333;
+}
+.wraper .row {
+  margin: 0px;
+}
+.wraper .content-box {
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  background: white;
+}
+.wraper .content-box .content-dh ul {
+  overflow: hidden;
+}
+.wraper .content-box .content-dh ul .active {
+  background: white;
+  border-bottom: none;
+  color: #00A383;
+  border-top: 5px solid #00A383;
+}
+.wraper .content-box .content-dh ul li {
+  float: left;
+  width: 20%;
+  padding: 10px 0px;
+  border-top: 5px solid rgba(192, 192, 192, 0.3);
+  border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+  font-size: 18px;
+  text-align: center;
+  background: rgba(220, 220, 220, 0.6);
+}
+.wraper .content-box .content-dh ul li:hover {
+  color: #00A383;
+  border-top: 5px solid #00A383;
+}
+.wraper .content-box .content-nr {
+  padding: 0px 20px;
+}
+.wraper .content-box .content-nr .content-img ul li {
+  display: inline-block;
+  margin: 15px 0px;
+}
+.wraper .content-box .content-nr .content-img ul li a {
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.wraper .content-box .content-nr .content-img ul li a:hover p {
+  color: #00A383;
+}
+.wraper .content-box .content-nr .content-img ul li a:hover span {
+  opacity: 0.8;
+}
+.wraper .content-box .content-nr .content-img ul li a img {
+  width: 66px;
+  height: 65px;
+  margin: 5px 12px;
+}
+.wraper .content-box .content-nr .content-img ul li a .glyphicon {
+  top: -23px;
+  line-height: 65px;
+}
+.wraper .content-box .content-nr .content-img ul li a span {
+  display: block;
+  width: 66px;
+  height: 65px;
+  position: absolute;
+  left: 12px;
+  background: #00A383;
+  opacity: 0;
+  font-size: 24px;
+  color: white;
+}
+.wraper .content-box .content-nr .content-img ul li a p {
+  display: inline-block;
+  width: 100%;
+  font-size: 12px;
+  color: #666;
+}
+.wraper .content-box .radio-inline {
+  margin: 30px 10px;
+}
+.wraper .foot {
+  margin-top: 50px;
+  font-size: 12px;
+}
+.wraper .foot .col-md-3 {
+  padding-top: 10px;
+}
+.wraper .foot ul {
+  padding-left: 10px;
+  list-style: none;
+  overflow: hidden;
+  margin: 0px;
+}
+.wraper .foot ul li {
+  display: inline-block;
+  padding: 1px 4px;
+}
+.wraper .foot ul li a {
+  color: #333;
+  display: block;
+}
+.wraper .top-back {
+  position: fixed;
+  bottom: 100px;
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0px 0px 5px;
+  cursor: pointer;
+}
+.wraper .top-back span {
+  position: absolute;
+  left: 10px;
+  top: 16px;
+}
+.wraper .top-back p {
+  display: inline-block;
+  font-family: 'Abril Fatface', cursive;
+  margin: 0px 0px 0px 10px;
+  position: relative;
+  left: 10px;
+}
+@keyframes yan {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-756px);
+  }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .wraper .toper .navbar-default .nav {
+    font-size: 14px;
+  }
+  .main {
+    position: relative;
+    top: 120px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+  .main {
+    position: relative;
+    top: 340px;
+  }
+}
+@media (max-width: 479px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+  .main {
+    position: relative;
+    top: 340px;
+  }
+}
+/*# sourceMappingURL=data.css.map */

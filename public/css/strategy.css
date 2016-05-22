@@ -1,0 +1,297 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+body {
+  background: rgba(192, 192, 192, 0.2);
+}
+ul {
+  margin: 0px;
+}
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.wraper .banner {
+  background: url(../img/page-bg.jpg) no-repeat center top;
+  width: 100%;
+  height: 474px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+.wraper .toper {
+  width: 86%;
+  height: 474px;
+  margin: 0px auto;
+  padding: 360px 15px 0px 15px;
+}
+.wraper .toper .navbar-fixed-top {
+  position: absolute;
+}
+.wraper .toper .navbar-default {
+  background: none;
+  border: none;
+}
+.wraper .toper .navbar-default .navbar-collapse {
+  padding-top: 10px;
+  border: none;
+}
+.wraper .toper .navbar-default .nav {
+  font-size: 16px;
+  font-weight: 700;
+}
+.wraper .toper .navbar-default .nav a {
+  color: white;
+}
+.wraper .toper .navbar-default .nav a:hover {
+  color: #00A383;
+}
+.wraper .toper .toper-bottom {
+  overflow: hidden;
+  position: relative;
+  top: 5px;
+}
+.wraper .toper .toper-bottom .no-pad {
+  padding: 1px;
+}
+.wraper .toper .toper-bottom a {
+  display: inline-block;
+  width: 100%;
+  height: 108px;
+  color: #fff;
+  text-align: center;
+  line-height: 108px;
+}
+.wraper .toper .toper-bottom a:hover {
+  text-decoration: none;
+}
+.wraper .toper .toper-bottom .toper-sp {
+  background: #AD2E25;
+  font-size: 32px;
+  font-weight: bold;
+}
+.wraper .toper .toper-bottom .toper-sp:hover {
+  background-image: -webkit-radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.3), #ad2f0b);
+  background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.3), #ad2f0b);
+}
+.wraper .toper .toper-bottom .toper-vp1 {
+  background: #222633;
+  font-size: 18px;
+}
+.wraper .toper .toper-bottom .toper-vp1:hover {
+  background-image: -webkit-radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), #222633);
+  background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), #222633);
+}
+.wraper .toper .toper-bottom .toper-login {
+  background: #384665;
+  font-size: 18px;
+}
+.wraper .toper .toper-bottom .toper-login:hover {
+  background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
+}
+.wraper .daohang {
+  margin: 20px 0px 5px 0px;
+}
+.wraper .daohang a {
+  color: #333;
+}
+.wraper .he-content {
+  background: #999;
+  padding: 20px;
+}
+.wraper .he-content ul {
+  border-top: 4px solid darkred;
+  display: inline-block;
+  background: white;
+}
+.wraper .he-content ul p {
+  display: inline-block;
+}
+.wraper .he-content ul span {
+  float: right;
+}
+.wraper .he-content ul li {
+  line-height: 25px;
+}
+.wraper .he-content ul li a {
+  color: #333;
+}
+.wraper .he-content ul li span {
+  float: right;
+}
+.wraper .gl-content {
+  overflow: hidden;
+}
+.wraper .gl-content .gl-content_left {
+  padding: 20px 0px 20px 0px;
+}
+.wraper .gl-content .gl-content_left ul {
+  background: white;
+  border: 1px solid #DCDCDC;
+  padding: 10px 20px 20px 20px;
+}
+.wraper .gl-content .gl-content_left ul .glyphicon-play {
+  font-size: 6px;
+  opacity: 0.8;
+}
+.wraper .gl-content .gl-content_left ul li {
+  line-height: 45px;
+  border-bottom: 1px dashed #DCDCDC;
+}
+.wraper .gl-content .gl-content_left ul li h4 {
+  font-weight: 700;
+}
+.wraper .gl-content .gl-content_left ul li i {
+  padding-right: 5px;
+}
+.wraper .gl-content .gl-content_left ul li a {
+  color: #333;
+}
+.wraper .gl-content .gl-content_left ul li span {
+  float: right;
+}
+.wraper .gl-content .gl-content_right {
+  padding: 20px 0px 20px 20px;
+}
+.wraper .gl-content .gl-content_right .rendu ul {
+  background: white;
+  border: 1px solid #DCDCDC;
+  padding: 10px;
+}
+.wraper .gl-content .gl-content_right .rendu ul li {
+  border-bottom: 1px dashed #DCDCDC;
+  line-height: 35px;
+}
+.wraper .gl-content .gl-content_right .rendu ul li h4 {
+  font-weight: 700;
+  margin: 0px;
+  padding: 10px 0px;
+  display: inline-block;
+  border-bottom: 2px solid #00A383;
+}
+.wraper .gl-content .gl-content_right .rendu ul li a {
+  color: #666;
+}
+.wraper .gl-content .gl-content_right .lanmu ul {
+  background: white;
+  border: 1px solid #DCDCDC;
+  padding: 10px;
+  margin: 20px 0px;
+}
+.wraper .gl-content .gl-content_right .lanmu ul li {
+  border-bottom: none;
+}
+.wraper .gl-content .gl-content_right .lanmu ul li h4 {
+  font-weight: 700;
+  margin: 0px;
+  padding: 10px 0px;
+  display: inline-block;
+  border-bottom: 2px solid #00A383;
+}
+.wraper .gl-content .gl-content_right .lanmu ul li img {
+  padding: 10px 0px;
+}
+.wraper .gl-content .gl-content_right .lanu {
+  margin: 20px 0px;
+}
+.wraper .foot {
+  margin-top: 50px;
+  font-size: 12px;
+}
+.wraper .foot .col-md-3 {
+  padding-top: 10px;
+}
+.wraper .foot ul {
+  padding-left: 10px;
+  list-style: none;
+  overflow: hidden;
+  margin: 0px;
+}
+.wraper .foot ul li {
+  display: inline-block;
+  padding: 1px 4px;
+}
+.wraper .foot ul li a {
+  color: #333;
+  display: block;
+}
+@keyframes yan {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-756px);
+  }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .wraper .toper .navbar-default .nav {
+    font-size: 14px;
+  }
+  .main {
+    position: relative;
+    top: 120px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+  .main {
+    position: relative;
+    top: 340px;
+  }
+}
+@media (max-width: 479px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+  .main {
+    position: relative;
+    top: 340px;
+  }
+}
+/*# sourceMappingURL=strategy.css.map */
