@@ -1,0 +1,341 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.wraper {
+  width: 100%;
+  height: 1084px;
+  background: url(/img/main-bg.jpg) no-repeat center top;
+}
+.wraper .toper {
+  width: 86%;
+  height: 474px;
+  margin: 0px auto;
+  padding: 360px 15px 0px 15px;
+}
+.wraper .toper .navbar-fixed-top {
+  position: absolute;
+}
+.wraper .toper .navbar-default {
+  background: none;
+  border: none;
+}
+.wraper .toper .navbar-default .navbar-collapse {
+  padding-top: 10px;
+  border: none;
+}
+.wraper .toper .navbar-default .nav {
+  font-size: 16px;
+  font-weight: 700;
+}
+.wraper .toper .navbar-default .nav a {
+  font-size: 16px;
+  color: white;
+}
+.wraper .toper .navbar-default .nav a:hover {
+  color: #00A383;
+}
+.wraper .toper .toper-bottom {
+  overflow: hidden;
+}
+.wraper .toper .toper-bottom .no-pad {
+  padding: 1px;
+}
+.wraper .toper .toper-bottom a {
+  display: inline-block;
+  width: 100%;
+  height: 108px;
+  color: #fff;
+  text-align: center;
+  line-height: 108px;
+}
+.wraper .toper .toper-bottom a:hover {
+  text-decoration: none;
+}
+.wraper .toper .toper-bottom .toper-sp {
+  background: #AD2E25;
+  font-size: 32px;
+  font-weight: bold;
+}
+.wraper .toper .toper-bottom .toper-sp:hover {
+  background-image: -webkit-radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.3), #ad2f0b);
+  background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.3), #ad2f0b);
+}
+.wraper .toper .toper-bottom .toper-vp1 {
+  background: #222633;
+  font-size: 18px;
+}
+.wraper .toper .toper-bottom .toper-vp1:hover {
+  background-image: -webkit-radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), #222633);
+  background-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), #222633);
+}
+.wraper .toper .toper-bottom .toper-login {
+  background: #384665;
+  font-size: 18px;
+}
+.wraper .toper .toper-bottom .toper-login:hover {
+  background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
+}
+.main {
+  margin-top: 270px;
+}
+.main .bread a {
+  font-size: 18px;
+}
+.main .bread .glyphicon {
+  font-size: 18px;
+  color: #C0C0C0;
+}
+.main .bread span {
+  font-size: 18px;
+}
+.main .subnav {
+  margin-top: 30px;
+}
+.main .subnav .sub-ul {
+  display: inline-block;
+}
+.main .subnav .sub-ul li.active {
+  background-color: #019F7F;
+}
+.main .subnav .sub-ul li {
+  float: left;
+  padding: 5px 30px;
+}
+.main .subnav .sub-ul li a {
+  font-size: 14px;
+}
+.main .col-md-12 {
+  padding: 0px;
+}
+.main .content .activity {
+  position: relative;
+  width: 312px;
+  padding: 0px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.main .content .activity .act-time {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+}
+.main .content .activity:hover .time-temp,
+.main .content .activity:hover .time-forever,
+.main .content .activity:hover .time-end {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+.main .content .activity .time-temp {
+  background: url(../img/icon1.png) no-repeat;
+  line-height: 20px;
+  padding: 0px 5px;
+}
+.main .content .activity .time-temp em {
+  font-size: 18px;
+  font-family: georgia;
+}
+.main .content .activity .time-temp span {
+  font-size: 12px;
+}
+.main .content .activity .time-temp p {
+  font-size: 12px;
+}
+.main .content .activity .time-forever {
+  background: url(../img/icon1.png) no-repeat;
+  padding: 16px 12px;
+}
+.main .content .activity .time-end {
+  background: url(../img/icon2.png) no-repeat;
+  padding: 16px 6px;
+}
+.main .content .view {
+  overflow: hidden;
+  height: 285px;
+  margin: 0px 0px 20px 0px;
+}
+.main .content .view .act-top {
+  position: relative;
+}
+.main .content .view .act-top .act-img img {
+  width: 100%;
+}
+.main .content .view .act-top .guanzhu {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #949494;
+  background: rgba(0, 0, 0, 0.4);
+  width: 310px;
+  padding: 10px 5px;
+  font-family: georgia;
+  border-left: 5px solid #EB3200;
+}
+.main .content .view .act-top .guanzhu .num {
+  color: #FF3500;
+  font-family: georgia;
+}
+.main .content .view .act-top .act-time {
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  text-align: center;
+  color: #fff;
+}
+.main .content .view .act-bottom .act-info {
+  border: 1px solid #cccccc;
+  padding: 15px;
+  height: 150px;
+}
+.main .content .view .act-bottom .act-info .act-title {
+  color: #019F7F;
+  font-size: 16px;
+  font-weight: 700;
+}
+.main .content .view .act-bottom .act-info .act-date {
+  color: #999;
+}
+.main .content .view .act-bottom .act-info .act-intro {
+  font-size: 12px;
+}
+.main .content .view:hover .act-inner {
+  opacity: 0.8;
+  transform: translateY(-289px);
+  transition: all 0.2s linear;
+}
+.main .content .view .act-inner {
+  width: 312px;
+  height: 288px;
+  background: #0B7F63;
+  line-height: 25px;
+  padding: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: all 0.2s linear;
+}
+.main .content .view .act-inner a {
+  color: #fff;
+  display: inline-block;
+}
+.main .content .view .act-inner a h2 {
+  font-weight: bolder;
+}
+.main .content .view .act-inner a p {
+  font-size: 12px;
+}
+.main .content .view .act-inner a .act-lnk {
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.footer {
+  width: 86%;
+  margin: 0px auto;
+}
+.footer .foot {
+  margin-top: 50px;
+  font-size: 12px;
+}
+.footer .foot .col-md-3 {
+  padding: 0px;
+  padding-top: 10px;
+}
+.footer .foot .col-md-9 {
+  padding: 0px;
+}
+.footer .foot ul {
+  padding-left: 10px;
+  list-style: none;
+  margin: 0px;
+}
+.footer .foot ul li {
+  display: inline-block;
+  padding: 1px 4px;
+}
+.footer .foot ul li a {
+  color: #333;
+  display: block;
+}
+/*当页面大于 1200px 时，大屏幕，主要是 PC 端*/
+@media (min-width: 1200px) {
+}
+/*在 992 和 1199 像素之间的屏幕里，中等屏幕，分辨率低的 PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .subnav-content .act-list ul li .content .activity {
+    width: 29% !important;
+  }
+}
+/*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .wraper .toper .navbar-default .nav a {
+    font-size: 14px;
+  }
+  .subnav-content .act-list ul li .content .activity {
+    width: 30% !important;
+    margin-right: 10px;
+  }
+}
+/*在 480 和 767 像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+  .col-md-12 {
+    width: 312px;
+    margin: 0 auto;
+  }
+  .col-md-12 .subnav .sub-ul li {
+    padding: 5px 8px !important;
+  }
+  .subnav-content .act-list ul li .content .activity {
+    float: none;
+    width: 312px;
+    margin: 0 auto;
+  }
+}
+/*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+  .wraper .toper .navbar-default .navbar-collapse {
+    background: #122B40;
+    opacity: 0.8;
+  }
+  .col-md-12 {
+    width: 312px;
+    margin: 0 auto;
+  }
+  .col-md-12 .subnav .sub-ul li {
+    padding: 5px 10px !important;
+  }
+  .subnav-content .act-list ul li .content .activity {
+    float: none;
+    width: 312px !important;
+    margin: 0 auto;
+  }
+  .subnav-content .act-list ul li .content .activity .view .act-bottom {
+    width: 312px !important;
+  }
+}
+/*# sourceMappingURL=activity.css.map */

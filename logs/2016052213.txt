@@ -1,0 +1,15 @@
+[2016-05-22 13:58:34.044] [ERROR] logInfo - Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+    --------------------
+    at Protocol._enqueue (D:\lolfinish\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+    at Protocol.handshake (D:\lolfinish\node_modules\mysql\lib\protocol\Protocol.js:52:41)
+    at PoolConnection.connect (D:\lolfinish\node_modules\mysql\lib\Connection.js:123:18)
+    at Pool.getConnection (D:\lolfinish\node_modules\mysql\lib\Pool.js:45:23)
+    at dataSource.getConn (D:\lolfinish\module\dataSource.js:14:12)
+    at loginControl.login (D:\lolfinish\control\loginControl.js:7:13)
+    at Layer.handle [as handle_request] (D:\lolfinish\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\lolfinish\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (D:\lolfinish\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\lolfinish\node_modules\express\lib\router\layer.js:95:5)
