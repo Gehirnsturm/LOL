@@ -21,7 +21,7 @@ body {
 .wraper {
   width: 100%;
   height: 1084px;
-  background: url(/img/main-bg.jpg) no-repeat center top;
+  background: url(/img/page-bg.jpg) no-repeat center top;
 }
 .wraper .toper {
   width: 86%;
@@ -94,7 +94,7 @@ body {
   background-image: radial-gradient(rgba(255, 255, 255, 0.3), rgba(56, 70, 101, 0.1));
 }
 .main {
-  margin-top: 270px;
+  margin-top: 20px;
 }
 .main .row {
   margin: 0px !important;
@@ -198,6 +198,10 @@ body {
 }
 /*在 992 和 1199 像素之间的屏幕里，中等屏幕，分辨率低的 PC*/
 @media (min-width: 992px) and (max-width: 1199px) {
+  .main {
+    position: relative;
+    top: 120px;
+  }
   .main .row .match .row .match-img {
     float: none;
     width: 60%;
@@ -214,6 +218,10 @@ body {
 }
 /*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
 @media (min-width: 768px) and (max-width: 991px) {
+  .main {
+    position: relative;
+    top: 120px;
+  }
   .wraper .toper .navbar-default .nav {
     font-size: 14px;
   }
@@ -228,6 +236,10 @@ body {
 }
 /*在 480 和 767 像素之间的屏幕里，超小屏幕，主要是手机*/
 @media (min-width: 480px) and (max-width: 767px) {
+  .main {
+    position: relative;
+    top: 340px;
+  }
   .wraper .toper .navbar-default .navbar-collapse {
     background: #122B40;
     opacity: 0.8;
@@ -247,6 +259,10 @@ body {
 }
 /*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
 @media (max-width: 479px) {
+  .main {
+    position: relative;
+    top: 340px;
+  }
   .wraper .toper .navbar-default .navbar-collapse {
     background: #122B40;
     opacity: 0.8;
