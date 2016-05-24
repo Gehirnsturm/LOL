@@ -28,14 +28,14 @@
 				        </div>
 				        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="false" style="height: 1px;">
 				          <ul class="nav navbar-nav" style="float: left;">
-				            <li><a href="#">官网首页</a></li>
-				            <li><a href="#">个人中心</a></li>
-				            <li><a href="#">游戏资料</a></li>
+				            <li><a href="/index.html">官网首页</a></li>
+				            <li><a href="/login.html" id="perlogin">个人中心</a></li>
+				            <li><a href="/data.html">游戏资料</a></li>
 				          </ul>
 				          <ul class="nav navbar-nav" style="float: right;">
-				            <li><a href="#">游戏攻略</a></li>
-				            <li><a href="#">活动中心</a></li>
-				            <li><a href="#">赛事中心</a></li>
+				            <li><a href="/strategy.html">游戏攻略</a></li>
+				            <li><a href="/activity.html">活动中心</a></li>
+				            <li><a href="/match.html">赛事中心</a></li>
 				          </ul>
 				        </div>
 				      </div>
@@ -157,8 +157,6 @@
 				if( $.validate.isEmail(email) == false ){
 					return $(".alert").alertMes({type:"danger",message:"邮箱格式不正确"});
 				}
-				
-				//提交ajax 
 				$._ajax({
 					url : "/register/register",
 					data : {"aname":aname,"email":email,"password":password}

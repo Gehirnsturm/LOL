@@ -1,9 +1,7 @@
 var personalControl = function (){}
-
 personalControl.prototype.index = function( req,res,next ){
 	res.render("personal.html",{user:req.session.admin});
 }
-
 personalControl.prototype.collectList = function( req,res,next ){
 	var ep = new EventProxy();
 	dataSource.getConn( ep );
@@ -15,17 +13,14 @@ personalControl.prototype.collectList = function( req,res,next ){
 		next(err);
 	});
 }
-
 personalControl.prototype.collectAdd = function( req,res,next ){
 	var ep = new EventProxy();
-	
 	ep.all("fileup","conn",function( filename,conn ){
 		var url = "/upfile/" + filename;
 		perCollectModule.collectAdd(ep,conn,[ req.body.imgname,url,req.body.imginfo,req.session.admin.aid ]);
 	})
-	util.upfile(ep,req.file);   //上传文件
-	dataSource.getConn( ep );   //获取连接
-	
+	util.upfile(ep,req.file);
+	dataSource.getConn( ep );
 	ep.on("success",function( data ){
 		if( data.insertId ){
 			res.json( config.info.suc ).end();
@@ -37,7 +32,6 @@ personalControl.prototype.collectAdd = function( req,res,next ){
 		next(err);
 	});
 }
-
 personalControl.prototype.collectDel = function( req,res,next ){
 	var ep = new EventProxy();
 	dataSource.getConn( ep );
@@ -49,7 +43,6 @@ personalControl.prototype.collectDel = function( req,res,next ){
 		next(err);
 	});
 }
-
 module.exports=function(){
 	return new personalControl();
 }

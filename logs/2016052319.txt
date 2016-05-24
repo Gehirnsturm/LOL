@@ -1,0 +1,11 @@
+[2016-05-23 19:58:42.839] [ERROR] logInfo - Error: listen EADDRINUSE :::80
+    at Object.exports._errnoException (util.js:870:11)
+    at exports._exceptionWithHostPort (util.js:893:20)
+    at Server._listen2 (net.js:1238:14)
+    at listen (net.js:1274:10)
+    at Server.listen (net.js:1370:5)
+    at EventEmitter.listen (C:\Users\Administrator\Desktop\LOL\node_modules\express\lib\application.js:617:24)
+    at Object.<anonymous> (C:\Users\Administrator\Desktop\LOL\app.js:93:5)
+    at Module._compile (module.js:435:26)
+    at Object.Module._extensions..js (module.js:442:10)
+    at Module.load (module.js:356:32)

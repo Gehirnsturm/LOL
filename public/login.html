@@ -23,69 +23,52 @@
     </style>
     <link rel="stylesheet" type="text/css" href="/css/loading.css"/>
     <script type="text/javascript">
-    	
     	$(function(){
-    		
-    		//localStorage缓存
-    		$("#username").val(localStorage.getItem("username"));
+    		$("#username").val(localStorage.getItem("email"));
     		$("#password").val(localStorage.getItem("password"));
     		if( localStorage.getItem("username") ){
     			$("#remember").parent().addClass("checked");
     		}
-    		
     		$(".btn-primary").click(function(){
     			var username = $("#username").val();
     			var password = $("#password").val();
-    			
     			if( $.validate.isEmpty( username ) == false ){
     				$(".form-signin .alert").alertMes({message:"用户名不能为空"});
     				$("#username").select();
     				return false;
     			}
-    			
     			if( $.validate.isEmail( username ) == false ){
     				$(".form-signin .alert").alertMes({type:"danger",message:"用户名不符合邮箱的格式"});
     				$("#password").select();
     				return false;
     			}
-    			
     			if( $.validate.isEmpty( password ) == false ){
     				$(".form-signin .alert").alertMes({message:"密码不能为空"});
     				$("#password").select();
     				return false;
     			}
-    			
-    			//5-03
-    			var remember = $("#remember").is(":checked");  //判断记住选项是否勾选
-    			
-    			//5-03
+    			var remember = $("#remember").is(":checked");
     			$._ajax({
     				url : "/login/login", 
     				data:{username:username,password:password,remember:remember},
     			}).done(function( obj ){
-						if( obj.code == 1 ){
-	    				//$(".form-signin .alert").alertMes({type:"success",message:obj.msg});
+						if( obj.issuper == 0 || obj.issuper == 1 ){
 	    				if( remember ){
-	    					localStorage.setItem("username",username);
-	    					localStorage.setItem("password",password);
+	    					sessionStorage.setItem("username",obj.aname);
+	    					localStorage.setItem("email",obj.email);
+	    					localStorage.setItem("password",obj.password);
 	    				}else{
-	    					localStorage.removeItem("username");
+	    					sessionStorage.removeItem("username");
+	    					localStorage.removeItem("email");
 	    					localStorage.removeItem("password");
 	    				}
 	    				window.location.href = "/admin/personal";
-
 	    			}else{
 	    				$(".form-signin .alert").alertMes({type:"danger",message:obj.msg});
 	    			}
 		    	}).fail(function() {
     				  $(".form-signin .alert").alertMes({type:"danger",message:"服务器没有响应，请稍后重试!"});
     			});
-    			
-//  			.fail(function( XMLHttpRequest, textStatus, errorThrown ){
-//  				console.log(XMLHttpRequest, textStatus, errorThrown);
-//  			});
-    			
-    			
     		});
     	})
     	
@@ -95,14 +78,12 @@
     <div class="container">
       <form class="form-signin" role="form">
         <h3 class="form-signin-heading">请登录</h3>
-        
         <div class="form-group">
         	<div class="alert alert-dismissable" style="display: none;">
             <button type="button" class="close">×</button>
             <strong class="title"></strong><span class="message"></span>
           </div>
         </div>
-        
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">
@@ -111,7 +92,6 @@
             <input type="text" class="form-control" name="username" id="username" placeholder="用户名" autocomplete="off" />
           </div>
         </div>
-
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">
@@ -120,13 +100,11 @@
             <input type="password" class="form-control" name="password" id="password" placeholder="密码" autocomplete="off" />
           </div>
         </div>
-
         <label class="checkbox">
           <input type="checkbox" id="remember" value="remember-me"> &nbsp; 记住
         </label>
         <button class="btn btn-lg btn-primary btn-block" type="button">登录</button>
       </form>
-
     </div>
     <div class="clearfix"></div>
   </body>

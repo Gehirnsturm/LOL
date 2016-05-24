@@ -28,7 +28,7 @@
 					        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="false" style="height: 1px;">
 					          <ul class="nav navbar-nav" style="float: left;">
 					            <li><a href="/index.html">官网首页</a></li>
-					            <li><a href="#">个人中心</a></li>
+					            <li><a href="/login.html" id="perlogin">个人中心</a></li>
 					            <li><a href="/data.html">游戏资料</a></li>
 					          </ul>
 					          <ul class="nav navbar-nav" style="float: right;">
@@ -1168,6 +1168,18 @@
 				    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
 				    if(sTop==0) clearTimeout(scrolldelay);
 				}
+				
+				$(function(){
+					//登录
+					if( sessionStorage.getItem("username") ){
+						$("#login").html(sessionStorage.getItem("username"));
+						$("#login").attr("href","/admin/personal");
+						$("#perlogin").attr("href","/admin/personal");
+					}else{
+						$("#login").html("账号登录");
+					}
+				});
+				
     </script>
   </body>
 </html>
