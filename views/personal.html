@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="bookmark" href="favicon.ico"/>
     <link rel="stylesheet" href="/css/site.min.css">
-    <!--<link rel="stylesheet" href="/css/wysiwyg.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="/css/loading.css"/>-->
+    <link rel="stylesheet" href="/css/wysiwyg.css">
     <link rel="stylesheet" type="text/css" href="/css/personal.css"/>
   </head>
   <body>
@@ -29,14 +28,14 @@
 				        </div>
 				        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="false" style="height: 1px;">
 				          <ul class="nav navbar-nav" style="float: left;">
-				            <li><a href="#">官网首页</a></li>
+				            <li><a href="/index.html">官网首页</a></li>
 				            <li><a href="#">个人中心</a></li>
-				            <li><a href="#">游戏资料</a></li>
+				            <li><a href="/data.html">游戏资料</a></li>
 				          </ul>
 				          <ul class="nav navbar-nav" style="float: right;">
-				            <li><a href="#">游戏攻略</a></li>
-				            <li><a href="#">活动中心</a></li>
-				            <li><a href="#">赛事中心</a></li>
+				            <li><a href="/strategy.html">游戏攻略</a></li>
+				            <li><a href="/activity.html">活动中心</a></li>
+				            <li><a href="/match.html">赛事中心</a></li>
 				          </ul>
 				        </div>
 				      </div>
@@ -59,7 +58,7 @@
 	      </div>
 	      <div id="bs-content-row-navbar-collapse-5" class="collapse navbar-collapse">
 	        <ul class="nav navbar-nav navbar-right">
-	          <li class="active"><a href="/login/logout">注销</a></li>
+	          <li class="active"><a href="/login/logout" id="logout" >注销</a></li>
 	          <li class="active"><a href="/index.html">返回首页</a></li>
 	        </ul>
 	      </div>
@@ -112,13 +111,16 @@
     <$- include('personal/collectAdd.html') $>
     <$- include('personal/perInfo.html') $>
     <$- include('personal/perstrategy.html') $>
+    <$- include('personal/perstrategyAdd.html') $>
+    <$- include('personal/perstrategypreviews.html') $>
   </body>
   <script type="text/javascript" src="/js/site.min.js"></script>
   <script src="/js/sHover.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/ejs.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/router.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/validate.js" type="text/javascript" charset="utf-8"></script>
-  <!--<script src="/js/bootstrap-wysiwyg.js" type="text/javascript" charset="utf-8"></script>-->
+  <script src="/js/jquery.hotkeys.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/bootstrap-wysiwyg.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/personalRouter.js" type="text/javascript" charset="utf-8"></script>
   
   <script type="text/javascript">
@@ -131,7 +133,9 @@
 					$("#myTab1 li:nth-child(" + (i+1) + ")").attr("class","active");
 	  		});
 	  	});
-			
+	  	$("#logout").click(function(){
+	  		sessionStorage.removeItem("username");
+	  	});
 	  });
   </script>
 </html>

@@ -1,5 +1,4 @@
 var registerControl = function (){}
-
 registerControl.prototype.adminAdd = function( req,res,next ){
 	var ep = new EventProxy();
 	dataSource.getConn( ep );
@@ -15,7 +14,6 @@ registerControl.prototype.adminAdd = function( req,res,next ){
 		next(err);
 	});
 }
-
 module.exports=function(){
 	return new registerControl();
 }

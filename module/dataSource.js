@@ -8,12 +8,9 @@ var dataSource = function(){
 	  dateStrings     : true
 	});
 }
-
-
 dataSource.prototype.getConn = function( ep ){
 	this.pool.getConnection( ep.done("conn") );
 }
-
 module.exports = function(){
 	return new dataSource();
 }

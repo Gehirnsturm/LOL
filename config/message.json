@@ -6,6 +6,7 @@
 	"error" : {
 		"loginerr" : {"code" : 0,"msg" : "登录失败，用户或密码错误!"},
 		"adminAdderr" : {"code" : 0,"msg" : "账号注册失败，请稍后重试！"},
-		"collectAdderr" : {"code" : 0,"msg" : "我的收藏添加失败，请稍后重试！"}
+		"collectAdderr" : {"code" : 0,"msg" : "我的收藏添加失败，请稍后重试！"},
+		"strategyAdderr" : {"code" : 0,"msg" : "我的攻略添加失败，请稍后重试！"}
 	}
 }

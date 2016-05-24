@@ -4,7 +4,6 @@ $(function(){
 	    enterTimeout : 200,
 	    leaveTimeout : 200
 	});
-	
 	/*个人信息开始*/
 	var perInfo = {
 		url : "/perInfo",
@@ -13,20 +12,86 @@ $(function(){
 		}
 	}
 	/*个人信息结束*/
-	
 	/*我的攻略开始*/
-	
 	var perstrategy = {
 		url : "/perstrategy",
 		render : function(){
 			return $("#perstrategy").html();
 		}
 	}
-	
+	var perstrategy = {
+		url : "/perstrategy",
+		ajaxData : function(){
+			var that = this;
+			return $._ajax({
+				url  : "/strategy/strategy",
+				type : "get"
+			}).done(function( data ){
+				that.data = data;
+			});
+		},
+		render : function(){
+			return ejs.render($("#perstrategy").html(),{strategy:this.data});
+		}
+	}
+	var perstrategyAdd = {
+		url : "/perstrategyAdd",
+		render : function(){
+			return ejs.render($("#perstrategyAdd").html());
+		},
+		bind : function(){
+			var t = $(this);
+			t.find("#editor").wysiwyg();
+			t.find("#sub").click(function(){
+				var stitle = t.find("#stitle").val();
+				var content = t.find("#editor").html();
+				if( $.validate.isEmpty(stitle) == false ){
+					return t.find(".alert").alertMes({message:"新闻标题不能为空"});
+				}
+				$._ajax({
+					url : "/strategy/strategy",
+					type : "post",
+					data : {"stitle":stitle,"content":content}
+				}).done(function( obj ){
+					if( obj.code ){
+						location.href = "/admin/personal#/perstrategy";
+					}else{
+						$(this).find(".alert").alertMes({type:"danger",message:obj.msg});
+					}
+				});
+			});
+		}
+	}
+	var perstrategyDel = {
+		url : "/perstrategyDel/:sid",
+		ajaxData : function(){
+			var t = this;
+			$._ajax({
+				url  : "/strategy/strategy/" + t.params.sid,
+				type : "delete"
+			}).done(function(){
+				location.href = "/admin/personal#/perstrategy";
+			});
+			return false;
+		}
+	}
+	var previews = {
+		url : "/previews/:sid",
+		ajaxData : function(){
+			var that = this;
+			return $._ajax({
+				url  : "/strategy/strategy/" + that.params.sid,
+				type : "get"
+			}).done(function( data ){
+				that.data = data;
+			});
+		},
+		render : function(){
+			return ejs.render($("#perstrategypreviews").html(),{s:this.data[0]});
+		}
+	}
 	/*我的攻略结束*/
-	
 	/*我的收藏开始*/
-	//显示我的收藏列表
 	var collectList = {
 		 url : "/collectList",
 		 className : "collectList",
@@ -48,12 +113,10 @@ $(function(){
 			 	opacity:80
 			});
 		 },
-		 
 		 render : function(){
 		 	return ejs.render($("#collectList").html(),{collects:this.data});
 		 }
 	}
-	
 	var collectAdd = {
 		url : "/collectAdd",
 		render : function(){
@@ -65,23 +128,18 @@ $(function(){
 				var imgname = t.find("#imgname").val();
 				var imginfo = t.find("#imginfo").val();
 				var imgpath = t.find("#imgpath").val();
-				
 				var data = new FormData();
 				data.append("imgname",imgname);
 				data.append("imginfo",imginfo);
 				data.append("upfile",t.find("#imgpath").get(0).files[0]);
-				
-				//提交ajax 
 				$._ajax({
 					url : "/admin/collect",
 					data: data,
 					cache: false,  
 			        contentType: false,  
 			        processData: false
-//					data : {"imgname":imgname,"imgpath":imgpath,"imginfo":imginfo}
 				}).done(function( obj ){
 					if( obj.code ){
-						//如果增加成功，返回管理员列表
 						location.href = "/admin/personal#/collectList";
 					}else{
 						$(this).find(".alert").alertMes({type:"danger",message:obj.msg});
@@ -89,8 +147,6 @@ $(function(){
 				});
 				
 			});
-			
-			
 			t.find("#imgpath").change(function(){
 				var file = this.files[0];
 				if( file.type.indexOf("image") == -1 ){
@@ -103,18 +159,15 @@ $(function(){
 //					t.find(".alert").alertMes({type:"danger",message:"只能上传小于512K的图片"});
 //					return;
 //				}
-				
 				var fr = new FileReader();
 				fr.readAsDataURL(file); 
 				fr.onload = function(){
 					$("#showimg").attr("src",fr.result);
 					$("#showimg").attr("style","height:175px;margin-top: 5px;");
 				}
-				
 			});
 		}
 	}
-	
 	var collectDel = {
 		url : "/collectDel/:cid",
 		ajaxData : function(){
@@ -125,13 +178,10 @@ $(function(){
 			}).done(function(){
 				location.href = "/admin/personal#/collectList";
 			});
-			
 			return false;
 		}
 	}
 	/*我的收藏结束*/
-	
-
 	//默认页面
 	var home = {
 		url : "/",
@@ -139,9 +189,11 @@ $(function(){
 			return $("#perInfo").html();
 		}
 	}
-	
 	router.push(perInfo)
 		  .push(perstrategy)
+		  .push(perstrategyAdd)
+		  .push(perstrategyDel)
+		  .push(previews)
 		  .push(collectList)
 		  .push(collectAdd)
 		  .push(collectDel)
