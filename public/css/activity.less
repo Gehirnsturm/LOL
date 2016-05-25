@@ -14,6 +14,9 @@ a{
         text-decoration: none;
     }
 }
+body{
+    background-color: #f8f8f8;
+}
 .wraper{
     width: 100%; height: 1084px; background: url(/img/page-bg.jpg) no-repeat center top;
     .toper{
@@ -41,6 +44,7 @@ a{
                 }
             }
         }
+        
         .toper-bottom{
             overflow: hidden;
             .no-pad{
@@ -208,14 +212,15 @@ a{
                         font-size: 12px;
                     }
                 }
-            }
+            }           
+            
             &:hover .act-inner{
                 opacity: 0.8;
                 transform: translateY(-289px);
                 transition: all 0.2s linear;  
             }            
             .act-inner{          
-                width: 312px;
+                width: 100%;
                 height: 288px;
                 background: #0B7F63;
                 line-height: 25px;
@@ -276,17 +281,21 @@ a{
         top: 120px;
     }
    .subnav-content .act-list ul li .content .activity{width:29% !important;} 
+   .footer .foot{
+        margin-top: 100px;
+    }
 }
 /*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
 @media (min-width: 768px) and (max-width: 991px) {
     .main{
         position: relative;
         top: 100px;
+        left: 30px;
     }
     .wraper .toper .navbar-default .nav a{
         font-size:14px ;
     }
-    .subnav-content .act-list ul li .content .activity{width:30% !important;margin-right: 10px;} 
+    .subnav-content .act-list ul li .content .activity{width:32% !important;margin-right: 10px;} 
 }
 /*在 480 和 767 像素之间的屏幕里，超小屏幕，主要是手机*/
 @media (min-width: 480px) and (max-width: 767px) {
@@ -294,10 +303,12 @@ a{
         position: relative;
         top: 340px;
     }
+
     .wraper .toper .navbar-default .navbar-collapse{
         background: #122B40;
         opacity: 0.8;
     }
+
    .col-md-12{
         width: 312px;
         margin: 0 auto;
@@ -306,6 +317,14 @@ a{
         }
     }  
     .subnav-content .act-list ul li .content .activity{ float: none; width: 312px; margin: 0 auto;} 
+    .view{
+        .act-bottom{
+            width: 312px !important;
+        }
+    }
+    .footer .foot{
+        margin-top: 350px;
+    }
 }
 /*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
 @media (max-width: 479px) {
@@ -322,6 +341,7 @@ a{
     .subnav-content .act-list ul li .content .activity{ 
         float: none; width: 312px !important; margin: 0 auto;
         .view{
+            width: 312px;
             .act-bottom{
                 width: 312px !important;
             }

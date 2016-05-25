@@ -15,6 +15,9 @@ a:hover {
   color: #000;
   text-decoration: none;
 }
+body {
+  background-color: #f8f8f8;
+}
 .wraper {
   width: 100%;
   height: 1084px;
@@ -225,7 +228,7 @@ a:hover {
   transition: all 0.2s linear;
 }
 .main .content .view .act-inner {
-  width: 312px;
+  width: 100%;
   height: 288px;
   background: #0B7F63;
   line-height: 25px;
@@ -293,18 +296,22 @@ a:hover {
   .subnav-content .act-list ul li .content .activity {
     width: 29% !important;
   }
+  .footer .foot {
+    margin-top: 100px;
+  }
 }
 /*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
 @media (min-width: 768px) and (max-width: 991px) {
   .main {
     position: relative;
     top: 100px;
+    left: 30px;
   }
   .wraper .toper .navbar-default .nav a {
     font-size: 14px;
   }
   .subnav-content .act-list ul li .content .activity {
-    width: 30% !important;
+    width: 32% !important;
     margin-right: 10px;
   }
 }
@@ -330,6 +337,12 @@ a:hover {
     width: 312px;
     margin: 0 auto;
   }
+  .view .act-bottom {
+    width: 312px !important;
+  }
+  .footer .foot {
+    margin-top: 350px;
+  }
 }
 /*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
 @media (max-width: 479px) {
@@ -348,6 +361,9 @@ a:hover {
     float: none;
     width: 312px !important;
     margin: 0 auto;
+  }
+  .subnav-content .act-list ul li .content .activity .view {
+    width: 312px;
   }
   .subnav-content .act-list ul li .content .activity .view .act-bottom {
     width: 312px !important;

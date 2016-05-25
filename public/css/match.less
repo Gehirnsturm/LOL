@@ -213,6 +213,9 @@ body{
     .mat-content .match ul li .row .col-md-3{
         width: 60%;
     }
+    .footer .foot{
+        margin-top: 140px;
+    }
 }
 /*在 768 和 991 像素之间的屏幕里，小屏幕，主要是 PAD*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -236,9 +239,16 @@ body{
                         width: 60%;
                         margin: 0 auto;
                     }
+
+                    .mat-title{
+                        font-size: 14px;
+                    }
                  }
              }
         }
+    }
+    .footer .foot{
+        margin-top: 150px;
     }
 }
 /*在 480 和 767 像素之间的屏幕里，超小屏幕，主要是手机*/
@@ -269,6 +279,9 @@ body{
              }
         }
     }
+    .footer .foot{
+        margin-top: 350px;
+    }
 }
 /*在小于 480 像素的屏幕，微小屏幕，更低分辨率的手机*/
 @media (max-width: 479px) {
@@ -280,5 +293,8 @@ body{
     .wraper .toper .navbar-default .navbar-collapse{
         background: #122B40;opacity: 0.8;
     }
-     .main .mat-type .type-list li { float: none; width: 100%; }
+    .main .mat-type .type-list li { float: none; width: 100%; }
+    .footer .foot{
+        margin-top: 350px;
+    }
 }
