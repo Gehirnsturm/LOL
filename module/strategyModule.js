@@ -1,6 +1,5 @@
 var strategyModule = function(){}
 strategyModule.prototype.adminList = function( ep ){
-	
 	ep.on("conn",function( conn ){
 		var sql = "select * from admin";
 		conn.query(sql,ep.done("success"));

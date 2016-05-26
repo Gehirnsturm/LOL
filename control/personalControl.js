@@ -7,7 +7,7 @@ personalControl.prototype.collectList = function( req,res,next ){
 	dataSource.getConn( ep );
 	perCollectModule.collectList(ep,[req.session.admin.aid]);
 	ep.on("success",function( data ){
-		res.json(data);
+		res.json(data).end();
 	});
 	ep.fail(function( err ){
 		next(err);

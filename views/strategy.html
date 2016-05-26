@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>英雄联盟-LOL-游戏攻略</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/strategy.css"/>
+  </head>
+  <body>
+  	<div class="wraper">
+  		<div class="banner">
+  					<div class="container">
+						<div class="toper">
+						<!--导航栏开始-->
+						<div class="bs-example bs-navbar-top-example" data-example-id="navbar-fixed-to-top">
+					    <nav class="navbar navbar-default navbar-fixed-top">
+					      <div class="container">
+					        <div class="navbar-header">
+					          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+					            <span class="sr-only">Toggle navigation</span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+					          </button>
+					        </div>
+					        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="false" style="height: 1px;">
+					          <ul class="nav navbar-nav" style="float: left;">
+					            <li><a href="/index.html">官网首页</a></li>
+					            <li><a href="/login.html" id="perlogin">个人中心</a></li>
+					            <li><a href="/data.html">游戏资料</a></li>
+					          </ul>
+					          <ul class="nav navbar-nav" style="float: right;">
+					            <li><a href="/strategyviews">游戏攻略</a></li>
+					            <li><a href="/activity.html">活动中心</a></li>
+					            <li><a href="/match.html">赛事中心</a></li>
+					          </ul>
+					        </div>
+					      </div>
+					    </nav>
+					  </div>
+	  				<!--导航栏结束-->
+	  				<!--登录栏开始-->
+	  				<div class="row toper-bottom">
+	  					<div class="col-md-7">
+	  						<div class="row">
+	  							<div class="col-md-6 col-sm-6 no-pad">
+	  								<a href="#" class="toper-sp">下载游戏</a>
+	  							</div>
+	  							<div class="col-md-3 col-sm-3 no-pad">
+	  								<a href="#" class="toper-vp1">新手教程</a>
+	  							</div>
+	  							<div class="col-md-3 col-sm-3 no-pad">
+	  								<a href="#"  class="toper-vp1">高手进阶</a>
+	  							</div>
+	  						</div>
+	  					</div>
+	  					<div class="col-md-5">
+	  						<div class="row">
+	  							<div class="col-md-6 col-sm-6 col-xs-6 no-pad">
+	  								<a href="/login.html" id="login" class="toper-login">账号登录</a>
+	  							</div>
+	  							<div class="col-md-6 col-sm-6 col-xs-6 no-pad">
+	  								<a href="/register.html" class="toper-login">账号注册</a>
+	  							</div>
+	  						</div>
+	  					</div>
+	  				</div>
+	  				<!--登录栏结束-->
+	  			</div>
+	  		</div>
+	  	</div>
+	  	<div class="container main">
+	  		<div class="daohang">
+						<a style="display: inline-block;" href="#"><h4>英雄联盟首页</h4></a> &gt; <a style="display: inline-block;" href="#"><h4>游戏攻略</h4></a>
+					</div>
+			<img style="width: 100%; margin-bottom:10px ;" src="/img/bb.jpg"/>
+			<div class="gl-content">
+						<div class="gl-content_left col-md-8" id="strategyContent">
+							
+						</div>
+						<div class="gl-content_right col-md-4">
+							<div class="rendu">
+								<ul>
+									<li style="border-bottom: 1px solid #DCDCDC;"><h4>攻略热度排行榜</h4></li>
+									
+									<$ stragegys.forEach(function( s ){ $>
+										<li><a href="#/views/<$= s.sid $>"><$= s.stitle $></a></li>
+									<$ }) $>
+									
+									<!--<li><a href="#">史上最强下路将诞生 Uzi确认重返皇族</a></li>
+									<li><a href="#">歪果仁看Uzi转会：银河战舰已构建完毕</a></li>
+									<li><a href="#">93%胜率上美服大师 疑似国人最强亚索</a></li>
+									<li><a href="#">MLXG艾特小虎：我俩啥时候恩断义绝？</a></li>
+									<li><a href="#">节奏转会SNAKE 战队或将迎来全华班</a></li>
+									<li><a href="#">Pawn或将退役 EDG新中单将出战夏季赛</a></li>
+									<li><a href="#">众多英雄将削弱 季中赛热门成主要目标</a></li>
+									<li><a href="#">浅谈UZI重返皇族 补全最后一块短板？</a></li>
+									<li><a href="#">SKT赛后群访 状态差真不是因为海底捞</a></li>-->
+									<li style="border-bottom: none;"><a href="#">北美网友谈CLG落败 S10可以期待冠军</a></li>
+								</ul>
+							</div>
+							<div class="lanmu col-md-12 col-sm-7">
+								<ul>
+									<li style="border-bottom: 1px solid #DCDCDC;"><h4>栏目推荐</h4></li>
+									<li><img src="/img/lan1.jpg"/></li>
+									<li><img src="/img/lan2.jpg"/></li>
+									<li><img src="/img/lan3.jpg"/></li>
+								</ul>
+							</div>
+							<div class="lanu col-md-12 col-sm-5">
+								<ul>
+									<li><img src="/img/lan4.jpg"/></li>
+								</ul>
+							</div>						
+						</div>
+					</div>
+			<div class="foot"> 
+						<div class="col-md-3">
+							<img src="/img/footlogoo.png"/>
+						</div>
+						<div class="col-md-9">
+							<ul>
+		  					<li><a href="#">腾讯互动娱乐</a></li>|
+		  					<li><a href="#">服务条款</a></li>|
+		  					<li><a href="#">广告服务</a></li>|
+		  					<li><a href="#">腾讯游戏招聘</a></li>|
+		  					<li><a href="#">腾讯游戏客服</a></li>|
+		  					<li><a href="#">腾讯游戏地图</a></li>|
+		  					<li><a href="#">腾讯游戏活动</a></li>|
+		  					<li><a href="#">商务合作</a></li>|
+		  					<li><a href="#">腾讯网</a></li>|
+		  					<li><a href="#">网站导航</a></li>
+		  				</ul>
+		  				<ul>
+		  					<li>COPYRIGHT &copy; 1998 - 2016 TENCENT. ALL RIGHTS RESERVED.</li>
+		  					<li style="float: right;"><a href="#">腾讯公司版权所有</a></li>
+		  				</ul>
+		  				<ul>
+		  					<li>&copy; 2012 Riot Games, Inc. ALL RIGHTS RESERVED.</li>
+		  				</ul>
+		  				<ul>
+		  					<li>文网进字[2011] 004号 & ISBN 978-7-89989-145-2</li>|
+		  					<li><a href="#">新出网证（粤）字010号</a></li>|
+		  					<li><a href="#">粤网文[2014]0633-233号</a></li>
+		  				</ul>
+						</div>
+	  			</div>
+	  	</div>
+  	</div>
+  	
+  	<$- include('personal/strategydef.html') $>
+  	<$- include('personal/strategyviews.html') $>
+  		
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/ejs.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="/js/router.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="/js/validate.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="/js/strategyviewsRouter.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	$(function(){
+					//登录
+					if( sessionStorage.getItem("username") ){
+						$("#login").html(sessionStorage.getItem("username"));
+						$("#login").attr("href","/admin/personal");
+						$("#perlogin").attr("href","/admin/personal");
+					}else{
+						$("#login").html("账号登录");
+					}
+				});
+    </script>
+   
+    
+  </body>
+</html>

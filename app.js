@@ -24,19 +24,22 @@ global.dataSource = require("./module/dataSource.js")();
 global.loginModule = require("./module/loginModule.js")();
 global.registerModule = require("./module/registerModule.js")();
 global.perCollectModule = require("./module/perCollectModule.js")();
-global.strategyModule = require("./module/strategyModule.js")();
+global.strategyModule = require("./module/strategyModule.js")(); 
+global.strategyviewsModule = require("./module/strategyviewsModule.js")();
 
 //加载控制器
 global.loginControl = require("./control/loginControl.js")();
 global.registerControl = require("./control/registerControl.js")();
 global.personalControl = require("./control/personalControl.js")();
-global.strategyControl = require("./control/strategyControl.js")();
+global.strategyControl = require("./control/strategyControl.js")();  
+global.strategyviewsControl = require("./control/strategyviewsControl.js")();
 
 //加载路由
 global.loginRouter = require("./router/loginRouter.js");
 global.registerRouter = require("./router/registerRouter.js");
 global.personalRouter = require("./router/personalRouter.js");
 global.strategyRouter = require("./router/strategyRouter.js"); 
+global.strategyviewsRouter = require("./router/strategyviewsRouter.js");
 
 //创建服务器
 var app = express();
@@ -65,6 +68,7 @@ app.use("/login",loginRouter);
 app.use("/register",registerRouter);
 app.use("/admin",util.checkLogin,personalRouter);
 app.use("/strategy",strategyRouter);
+app.use("/strategyviews",strategyviewsRouter);
 
 //配置静态服务器
 app.use(express.static('public'));
